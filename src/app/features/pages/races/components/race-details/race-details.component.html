@@ -1,0 +1,21 @@
+<div class="race-details">
+  <div class="race-details__item">
+    <span class="title-semi-2">Track: </span>
+    №{{race.track}}
+  </div>
+  <div class="race-details__item">
+    <span class="title-semi-2">Winner: </span>
+    {{race.winner || 'no information available' }}
+  </div>
+  <div class="race-details__item">
+    <div class="title-semi-2">Participants info: </div>
+
+    <ng-container *ngFor="let participant of race.participants">
+      <div class="race-details__item" style="padding-left: 18px">
+        <span class="title-semi-1">{{participant.name}}: </span>
+        {{participant.winsPercentage}}% wins
+      </div>
+    </ng-container>
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="race-list">
+  <ng-container *ngFor="let item of items; let index = index">
+    <div
+      class="race-list__item title-regular-2"
+      [class.race-list__item--active]="activeItem == index"
+      (click)="onItemClick(index)"
+    >
+      <div class="title-semi-2">
+        #{{item.id}}
+      </div>
+      <div>
+        <span class="title-semi-2">Race date: </span>
+        <span>{{item.date | date: 'dd.MM.yyyy HH:mm'}}</span>
+      </div>
+      <div>
+        <span class="title-semi-2">Participants: </span>
+        <ng-container *ngFor="let participant of item.participants;let last = last">
+          <span>{{participant.name}}</span>
+          <span *ngIf="!last">, </span>
+        </ng-container>
+      </div>
+    </div>
+
+    <ng-container *ngIf="activeItem == index">
+      <race-details [race]="item"></race-details>
+    </ng-container>
+  </ng-container>
+</div>

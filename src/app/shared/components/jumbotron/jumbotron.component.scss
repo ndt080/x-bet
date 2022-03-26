@@ -1,0 +1,36 @@
+@import "src/assets/styles/vars";
+
+.jumbotron {
+  padding: 16px;
+  border-radius: 20px;
+  background-color: $background-dark-color;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_btn {
+      color: $secondary-light-color;
+      font-size: 32px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  &__description {
+    visibility: visible;
+    margin-top: 16px;
+    height: auto;
+    opacity: 1;
+    transition: all 1s, opacity 0.1s;
+  }
+
+  &__description.jumbotron--hide {
+    visibility: hidden;
+    margin-top: 0;
+    height: 0;
+    opacity: 0;
+  }
+}

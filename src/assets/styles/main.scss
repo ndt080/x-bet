@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'boxicons/css/boxicons.min.css';
+@import 'boxicons/css/animations.css';
+@import 'boxicons/css/transformations.css';
+@import 'multiselect';
+@import 'vars';
+@import 'fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $base-font-family !important;
+  margin: 0;
+  padding: 0;
+}

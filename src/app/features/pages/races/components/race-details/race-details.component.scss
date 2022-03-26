@@ -1,0 +1,13 @@
+@import "src/assets/styles/vars";
+
+.race-details {
+  padding: 16px;
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__item:nth-last-child {
+    margin-bottom: 0;
+  }
+}

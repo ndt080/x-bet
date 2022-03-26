@@ -1,0 +1,51 @@
+<div class="race-form__title title-semi-4">Add new race</div>
+<div class="race-form" [formGroup]="form">
+  <div class="race-form__group">
+    <label class="race-form__label">
+      <span class="title-semi-2">Date: </span>
+      <input
+        type="date"
+        formControlName="date"
+        class="race-form__input title-regular-1"
+      />
+    </label>
+  </div>
+  <div class="race-form__group">
+    <label class="race-form__label">
+      <span class="title-semi-2">Time: </span>
+      <input
+        type="time"
+        formControlName="time"
+        class="race-form__input title-regular-1"
+      />
+    </label>
+  </div>
+  <div class="race-form__group">
+    <label class="race-form__label">
+      <span class="title-semi-2">Track №: </span>
+      <select
+        formControlName="track"
+        class="race-form__select title-regular-1"
+      >
+        <option value="" disabled selected>Select track</option>
+        <option>1</option>
+        <option>2</option>
+      </select>
+    </label>
+  </div>
+  <div class="race-form__group" style="margin-right: 4px">
+    <div class="title-semi-2">Participants: </div>
+  </div>
+  <div class="race-form__group" style="min-width: 200px">
+    <ng-multiselect-dropdown
+      class="race-form__select select title-regular-1"
+      placeholder="Select horse"
+      formControlName="participants"
+      [settings]="dropdownSettings"
+      [data]="horses"
+    >
+    </ng-multiselect-dropdown>
+  </div>
+
+  <button class="race-form__button" (click)="onSubmit()" [disabled]="!form.valid">Add</button>
+</div>

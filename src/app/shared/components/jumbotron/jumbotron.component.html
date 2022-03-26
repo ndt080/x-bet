@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <div class="jumbotron__header">
+    <ng-content select="title, [jumbotron-title]"></ng-content>
+    <i
+      *ngIf="withDescription"
+      class="bx jumbotron__header_btn"
+      [ngClass]="isHide ? 'bx-chevron-up' : 'bx-chevron-down'"
+      (click)="onHideButtonClick()"
+    >
+    </i>
+  </div>
+
+  <div class="jumbotron__description" [class.jumbotron--hide]="isHide" *ngIf="withDescription">
+    <ng-content select="description, [jumbotron-description]"></ng-content>
+  </div>
+</div>

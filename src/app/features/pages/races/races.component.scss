@@ -1,0 +1,14 @@
+@import "src/assets/styles/vars";
+
+.race-page {
+  &__wrapper {
+    border-radius: 20px;
+    min-height: 64px;
+    background-color: $background-dark-color;
+    padding: 16px;
+  }
+
+  &--bottom-space {
+    margin-bottom: 16px;
+  }
+}
