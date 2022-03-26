@@ -1,0 +1,46 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/multiselect";
+
+.race-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__group {
+    margin-right: 18px;
+  }
+
+  &__input {
+    border-radius: 9px;
+    border-width: 1px;
+    padding: 8px;
+    min-width: 50px;
+  }
+
+  &__input.ng-dirty.ng-invalid {
+    outline-color: $error-color;
+    border-color: $error-color;
+  }
+
+  &__select {
+    border-color: #0a0a0a;
+    border-radius: 8px;
+    padding: 8px 8px;
+    min-width: 100px;
+  }
+
+  &__select:focus {
+    border-width: 2px;
+  }
+
+  &__select.ng-dirty.ng-invalid {
+    outline-color: $error-color;
+    border-color: $error-color;
+  }
+
+  &__button {
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+}

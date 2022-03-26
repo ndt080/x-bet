@@ -1,0 +1,27 @@
+<div class="navbar">
+  <div class="navbar__logo title-semi-4" (click)="onLogoClick()">
+    <img class="navbar__logo_img" src="assets/img/horse.svg" alt="logo"/>
+    XBet
+  </div>
+  <div class="navbar__container">
+    <div class="navbar__list">
+      <ng-container *ngFor="let item of navbarItems">
+        <ng-container *ngIf="item.isAuth === hasUser">
+          <a class="navbar__item title-regular-3" routerLink="{{item.link}}">{{item.title}}</a>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="navbar__dropdown" *ngIf="hasUser">
+      <div class="navbar__dropdown_control" (click)="onDropdownControlClick()">
+
+      </div>
+      <div class="navbar__dropdown_list" *ngIf="isShowDropdown">
+        <ng-container *ngFor="let item of dropdownItems">
+          <ng-container *ngIf="item.isAuth === hasUser">
+            <a class="navbar__item title-regular-2" routerLink="{{item.link}}">{{item.title}}</a>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

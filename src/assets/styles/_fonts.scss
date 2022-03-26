@@ -1,0 +1,99 @@
+@import "vars";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//FONT FAMILY MIXIN
+@mixin montserrat-bold {
+  font-family: $base-font-family;
+  font-weight: 900;
+}
+
+@mixin montserrat-semi {
+  font-family: $base-font-family;
+  font-weight: 800;
+}
+
+@mixin montserrat-medium {
+  font-family: $base-font-family;
+  font-weight: 500;
+}
+
+@mixin montserrat-regular {
+  font-family: $base-font-family;
+  font-weight: 400;
+}
+
+//TITLE FONT
+.title {
+  &-regular-0 {
+    @include montserrat-regular;
+    font-size: 12px;
+  }
+  &-medium-0 {
+    @include montserrat-medium;
+    font-size: 12px;
+  }
+  &-semi-1 {
+    @include montserrat-semi;
+    font-size: 14px;
+  }
+
+  &-regular-1 {
+    @include montserrat-regular;
+    font-size: 14px;
+  }
+
+  &-medium-1 {
+    @include montserrat-medium;
+    font-size: 14px;
+  }
+  &-semi-2 {
+    @include montserrat-semi;
+    font-size: 16px;
+  }
+
+  &-regular-2 {
+    @include montserrat-regular;
+    font-size: 16px;
+  }
+
+  &-medium-2 {
+    @include montserrat-medium;
+    font-size: 16px;
+  }
+
+  &-medium-3 {
+    @include montserrat-medium;
+    font-size: 18px;
+  }
+
+  &-semi-3 {
+    @include montserrat-semi;
+    font-size: 18px;
+  }
+
+  &-regular-3 {
+    @include montserrat-regular;
+    font-size: 18px;
+  }
+
+  &-semi-4 {
+    @include montserrat-semi;
+    font-size: 20px;
+  }
+
+  &-bold-5 {
+    @include montserrat-bold;
+    font-size: 24px;
+  }
+
+  &-bold-6 {
+    @include montserrat-bold;
+    font-size: 28px;
+  }
+
+  &-bold-8 {
+    @include montserrat-bold;
+    font-size: 32px;
+  }
+}

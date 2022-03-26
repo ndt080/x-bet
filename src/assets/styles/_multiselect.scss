@@ -1,0 +1,38 @@
+@import "ng-multiselect-dropdown/themes/ng-multiselect-dropdown.theme";
+@import "vars";
+
+.select.ng-invalid.ng-dirty {
+  .multiselect-dropdown {
+    .dropdown-btn {
+      border-color: $error-color !important;
+    }
+  }
+}
+
+.multiselect-dropdown {
+  background-color: white;
+  .dropdown-btn {
+    border-radius: 8px !important;
+    border-color: $dark-color !important;
+  }
+
+  .selected-item {
+    font-size: 12px !important;
+    background-color: $primary-dark-color !important;
+  }
+}
+
+.dropdown-list {
+  border-radius: 16px !important;
+  padding: 8px;
+}
+
+.multiselect-item-checkbox input[type='checkbox'] {
+  border-radius: 4px !important;
+}
+
+.multiselect-item-checkbox input[type='checkbox']:focus + div:before,
+.multiselect-item-checkbox input[type='checkbox']:hover + div:before {
+  border-color: $primary-color !important;
+  background-color: #f2f2f2;
+}
