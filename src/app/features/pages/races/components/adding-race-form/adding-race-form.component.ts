@@ -6,6 +6,7 @@ import { IDropdownSettings } from "ng-multiselect-dropdown";
 import { Race } from "@core/models";
 import * as moment from "moment";
 
+
 @Component({
   selector: "adding-race-form, [adding-race-form]",
   templateUrl: "./adding-race-form.component.html",
